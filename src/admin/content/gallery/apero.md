@@ -1,5 +1,5 @@
 ---
-title: Apéro
+title: Trauung & Apéro
 visible_apero: true
 visible_fest: true
 images:
@@ -210,8 +210,5 @@ images:
   - image: /uploads/Hochzeit_Esther&Raphael327.jpg
   - image: /uploads/Hochzeit_Esther&Raphael328.jpg
   - image: /uploads/Hochzeit_Esther&Raphael329.jpg
-  - image: /uploads/Hochzeit_Esther&Raphael340.jpg
-  - image: /uploads/Hochzeit_Esther&Raphael341.jpg
-  - image: /uploads/Hochzeit_Esther&Raphael342.jpg
 ---
 
