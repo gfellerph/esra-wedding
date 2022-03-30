@@ -1,5 +1,5 @@
 ---
-title: Hirschen
+title: Abendessen
 visible_apero: false
 visible_fest: true
 images:
