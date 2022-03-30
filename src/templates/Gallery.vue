@@ -1,5 +1,7 @@
 <template>
   <layout>
+    <ClientOnly>
+      
     <section class="gallery-container">
       <aside>
         <nav class="gallery-nav">
@@ -21,6 +23,7 @@
         ></g-image>
       </div>
     </section>
+    </ClientOnly>
   </layout>
 </template>
 
@@ -48,11 +51,14 @@
 </page-query>
 
 <script>
-let mediumZoom;
+
 let Masonry;
-let masonry;
+let mediumZoom;
 let zoom;
-let libsPromise;
+
+Masonry = import('masonry-layout');
+mediumZoom = import('medium-zoom');
+
 
 export default {
   data() {
@@ -71,20 +77,6 @@ export default {
         });
     }
   },
-  async beforeMount() {
-    const MasonryModule = await import("masonry-layout");
-    const mediumZoomModule = await import("medium-zoom");
-    libsPromise = Promise.all([MasonryModule, mediumZoomModule]).then(() => {
-      Masonry = MasonryModule.default;
-      mediumZoom = mediumZoomModule.default;
-      zoom = mediumZoom();
-    });
-  },
-  beforeRouteUpdate(to, from, next) {
-    this.loaded = false;
-    zoom.detach();
-    next();
-  },
   updated() {
     this.loadedImages = 0;
     [...document.querySelectorAll("[data-zoomable]")].map(img => {
@@ -97,9 +89,10 @@ export default {
       if (this.loadedImages >= this.$page.gallery.images.length) {
         const gallery = document.querySelector(".gallery");
         this.$nextTick(async () => {
-          await libsPromise;
-          masonry = new Masonry(gallery, { gutter: 8 });
-          zoom.attach("[data-zoomable]");
+          const MasonryLib = await Masonry;
+          const mediumZoomLib = await mediumZoom;
+          new MasonryLib.default(gallery, { gutter: 8 });
+          zoom = mediumZoomLib.default("[data-zoomable]");
           this.loaded = true;
         });
       }

@@ -42,7 +42,7 @@ export default {
     };
   },
   mounted() {
-    document.body.addEventListener("click", e => {
+    /* document.body.addEventListener("click", e => {
       const { pageX, pageY } = e;
       const img = document.createElement("img");
       img.src = `/dot${Math.round(Math.random() * 9)}.png`;
@@ -61,7 +61,7 @@ export default {
         img.parentNode.removeChild(img);
       });
       document.body.append(img);
-    });
+    }); */
   }
 };
 </script>
