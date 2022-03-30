@@ -1,5 +1,5 @@
 ---
-title: Trauung & Apéro
+title: Trauung und Apéro
 visible_apero: true
 visible_fest: true
 images:
