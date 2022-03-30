@@ -77,7 +77,7 @@ export default {
         });
     }
   },
-  updated() {
+  mounted() {
     this.loadedImages = 0;
     [...document.querySelectorAll("[data-zoomable]")].map(img => {
       if (img.complete) this.imageLoaded();
@@ -86,9 +86,10 @@ export default {
   methods: {
     imageLoaded() {
       this.loadedImages++;
-      if (this.loadedImages >= this.$page.gallery.images.length) {
+      if (this.loadedImages === this.$page.gallery.images.length) {
         const gallery = document.querySelector(".gallery");
         this.$nextTick(async () => {
+          console.log('call')
           const MasonryLib = await Masonry;
           const mediumZoomLib = await mediumZoom;
           new MasonryLib.default(gallery, { gutter: 8 });
@@ -122,20 +123,9 @@ export default {
   img {
     width: calc(50% - 4px);
     margin-bottom: 8px;
-    opacity: 0;
-    will-change: opacity;
   }
 
-  &.loaded img {
-    transition: opacity 1.5s, transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) !important;
-    opacity: 1;
-
-    @for $i from 0 to 20 {
-      &:nth-child(#{$i}) {
-        transition-delay: 0.05s * $i !important;
-      }
-    }
-  }
+  
 }
 
 .gallery-nav {
