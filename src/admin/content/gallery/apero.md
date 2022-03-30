@@ -233,5 +233,7 @@ images:
   - image: /uploads/Hochzeit_Esther&Raphael350.jpg
   - image: /uploads/Hochzeit_Esther&Raphael351.jpg
   - image: /uploads/Hochzeit_Esther&Raphael352.jpg
+  - image: /uploads/Hochzeit_Esther&Raphael353.jpg
+  - image: /uploads/Hochzeit_Esther&Raphael354.jpg
 ---
 
