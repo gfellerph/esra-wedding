@@ -92,5 +92,7 @@ images:
   - image: /uploads/Hochzeit_Esther&Raphael490.jpg
   - image: /uploads/Hochzeit_Esther&Raphael491.jpg
   - image: /uploads/Hochzeit_Esther&Raphael492.jpg
+  - image: /uploads/Hochzeit_Esther&Raphael493.jpg
+  - image: /uploads/Hochzeit_Esther&Raphael494.jpg
 ---
 
