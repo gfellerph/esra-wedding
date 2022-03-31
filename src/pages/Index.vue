@@ -3,7 +3,7 @@
     <login v-show="!mode" />
     <rsvp v-show="mode" />
     <program v-show="mode" />
-    <map-component v-show="mode" />
+    <!-- <map-component v-show="mode" /> -->
   </layout>
 </template>
 
