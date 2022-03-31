@@ -1,4 +1,5 @@
 ---
+pagename: Abendessen
 title: Abendessen
 visible_apero: false
 visible_fest: true
