@@ -54,10 +54,11 @@
 
 let Masonry;
 let mediumZoom;
-let zoom;
 
-Masonry = import('masonry-layout');
-mediumZoom = import('medium-zoom');
+if (process.isClient) {
+  Masonry = import('masonry-layout');
+  mediumZoom = import('medium-zoom');
+}
 
 
 export default {

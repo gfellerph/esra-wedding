@@ -113,6 +113,7 @@ collections:
     slug: "{{slug}}"
     extension: md
     fields:
+      - { label: Seitenname, name: pagename, widget: string }
       - { label: Name, name: title, widget: string }
       - {
           label: Für Aperogäste sichtbar,
