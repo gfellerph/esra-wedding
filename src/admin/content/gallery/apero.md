@@ -1,5 +1,6 @@
 ---
-title: Trauung und Apéro
+pagename: trauung-und-apero
+title: Trauung & Apéro
 visible_apero: true
 visible_fest: true
 images:
