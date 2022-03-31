@@ -17,7 +17,7 @@
     "masonry-layout": "^4.2.2",
     "medium-zoom": "^1.0.5",
     "netlify-cms": "^2.10.15",
-    "remark-html": "^10.0.0",
+    "remark-html": "^13.0.2",
     "sass": "^1.24.3",
     "sass-loader": "^8.0.0",
     "vuelidate": "^0.7.5",
