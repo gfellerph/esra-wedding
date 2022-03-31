@@ -2,7 +2,7 @@
   "name": "esra-wedding",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
+    "build": "node create-thumbs.js && gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },

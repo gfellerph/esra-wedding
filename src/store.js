@@ -25,7 +25,6 @@ function createStore(isClient) {
             return true;
           return false;
         });
-        console.log(galleries);
         return galleries;
       },
     },

@@ -8,7 +8,7 @@ module.exports = {
   siteName: "esra-wedding",
   titleTemplate: "%s",
   configureWebpack: {
-    mode: "development"
+    mode: "development",
   },
   transformers: {
     remark: {
@@ -17,37 +17,37 @@ module.exports = {
       anchorClassName: "icon icon-link",
       plugins: [
         // ...global plugins
-      ]
-    }
+      ],
+    },
   },
   templates: {
-    Gallery: "/gallery/:title"
+    Gallery: "/gallery/:pagename",
   },
   plugins: [
     {
       use: `gridsome-plugin-netlify-cms`,
       options: {
-        publicPath: `/admin`
-      }
+        publicPath: `/admin`,
+      },
     },
     {
-      use: "gridsome-plugin-netlify-cms-paths"
+      use: "gridsome-plugin-netlify-cms-paths",
     },
     {
       use: "@gridsome/source-filesystem",
       options: {
         path: "src/admin/content/*.md",
         typeName: "netlifyPages",
-        remark: {}
-      }
+        remark: {},
+      },
     },
     {
       use: "@gridsome/source-filesystem",
       options: {
         path: "src/admin/content/gallery/*.md",
         typeName: "Gallery",
-        remark: {}
-      }
-    }
-  ]
+        remark: {},
+      },
+    },
+  ],
 };
